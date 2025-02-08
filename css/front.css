@@ -9,7 +9,7 @@ body {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 70px;
     font-family: "Bungee Hairline", serif;
     opacity: 0;
     animation: fadeIn 2s ease-in-out forwards;
@@ -20,6 +20,15 @@ h1 {
     animation: fadeOut 2s ease-in-out forwards !important;
 }
 
+.btn{
+    font-family: "Bungee Hairline", serif;
+    font-weight: bold;
+    border: #f4f4f4;
+    background-color: #f4f4f4;
+    font-size: 30px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
 
 @keyframes fadeIn {
     from {
@@ -39,6 +48,6 @@ h1 {
     }
     to { 
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateX(-20px);
     }
 }
