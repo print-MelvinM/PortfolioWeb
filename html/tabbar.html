@@ -8,74 +8,41 @@
   </head>
   <body>
     <nav class="amazing-tabs">
-      <div class="filters-container">
-        <div class="filters-wrapper">
-          <div class="filter-slider" aria-hidden="true">
-            <div class="filter-slider-rect">&nbsp;</div>
-          </div>
-        </div>
-      </div>
       <div class="main-tabs-container">
-        <div class="main-tabs-wrapper">
-          <ul class="main-tabs">
-            <li>
-              <button
-                class="round-button"
-                data-translate-value="0"
-                data-color="red"
-                onclick="location.href='abtme.html';">
-              <img src="../images/home.svg" alt="user avatar" class="profile-picture" fill="currentColor">
-              </button>
-            </li>
-            <li>
-              <button
-                class="round-button gallery active"
-                style="  --round-button-active-color: #212121;"
-                data-translate-value="100%"
-                data-color="blue"
-                onclick="location.href='skill.html';">
-              <img src="../images/company.svg" alt="user avatar" class="profile-picture" fill="currentColor">
-              </button>
-            </li>
-            <li>
-              <button
-                class="round-button"
-                style="  --round-button-active-color: #212121;"
-                data-translate-value="200%"
-                data-color="green"
-                disabled
-              >
-              <span class="avatar">
-                <img class= "prof" src="../images/profile.jpg" alt="user avatar">
-              </span>
-              </button>
-            </li>
-            <li>
-              <button class="round-button"
-                      style="--round-button-active-color: #212121;"
-                      data-translate-value="300%"
-                      data-color="purple"
-                      onclick="location.href='certi.html';">
-                  <img src="../images/skils.svg" alt="user avatar" class="profile-picture" fill="currentColor">
-              </button>
-            </li>
-            <li>
-              <button
-                class="round-button"
-                style="  --round-button-active-color: #212121;"
-                data-translate-value="400%"
-                data-color="orange"
-                onclick="location.href='more of me.html';">
-              <img src="../images/more2.svg" alt="user avatar" class="profile-picture" fill="currentColor">
-              </button>
-            </li>
-          </ul>
-          <div class="main-slider" aria-hidden="true">
-            <div class="main-slider-circle">&nbsp;</div>
+          <div class="main-tabs-wrapper">
+              <ul class="main-tabs">
+                  <li>
+                      <button class="round-button" onclick="location.href='abtme.html';">
+                          <img src="../images/home.svg" alt="home" class="profile-picture">
+                      </button>
+                  </li>
+                  <li>
+                      <button class="round-button active" onclick="location.href='skill.html';">
+                          <img src="../images/company.svg" alt="company" class="profile-picture">
+                      </button>
+                  </li>
+                  <li>
+                      <button class="round-button" disabled>
+                          <span class="avatar"><img class="prof" src="../images/profile.jpg" alt="profile"></span>
+                      </button>
+                  </li>
+                  <li>
+                      <button class="round-button" onclick="location.href='certi.html';">
+                          <img src="../images/skils.svg" alt="skills" class="profile-picture">
+                      </button>
+                  </li>
+                  <li>
+                      <button class="round-button" onclick="location.href='more of me.html';">
+                          <img src="../images/more2.svg" alt="more" class="profile-picture">
+                      </button>
+                  </li>
+              </ul>
+              <div class="main-slider" aria-hidden="true">
+                  <div class="main-slider-circle">&nbsp;</div>
+              </div>
           </div>
-        </div>
       </div>
-    </nav>
-    <script src="../js/tabbar.js"></script>
+  </nav>
+  <script src="../js/tabbar.js"></script>
   </body>
 </html>
