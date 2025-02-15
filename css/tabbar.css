@@ -8,7 +8,7 @@
 
 :root {
   --background-color: #222831;
-  --white: #49505c;
+  --white: #29384d;
   --round-button-active-color: #212121;
   --translate-main-slider: 400%;
   --main-slider-color: #6dd6d6;
@@ -47,10 +47,13 @@ nav.amazing-tabs {
   border-radius: 0px 0px 30px 30px;
   user-select: none;
   padding-top: 1rem;
+  position: sticky; /* Add this line */
+  top: 0;           /* Add this line */
+  z-index: 100;      /* Optional: ensure it's above other content */
 }
 
 .main-tabs-container {
-  padding: 0 1rem 1rem 1rem;
+  padding: 0 15rem 1rem 15rem;
 }
 
 .main-tabs-wrapper {
@@ -197,11 +200,11 @@ ul.main-tabs li {
   transition: transform 0.4s ease-in-out;
   transform: translateX(var(--translate-filters-slider));
 }
-/* add this to set the active color of the last main button on load */
+
 .round-button[data-translate-value="400%"] {
   color: var(--round-button-active-color);
 }
-/* add this to set the active color of the last filter button on load */
+
 .filter-button[data-translate-value="400%"] {
     color: var(--grey-900);
 }
