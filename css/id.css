@@ -199,7 +199,7 @@ object-fit: cover;
     align-items: right;
     padding: 30px;
     width: 80%;
-    max-width: 800px; /*increased max width to allow for row layout*/
+    max-width: 800px; 
 }
 
 .moreofme .links {
@@ -227,12 +227,12 @@ object-fit: cover;
     background: linear-gradient(60deg, #006466 0%, #4D194d 100%);
     border: none;
     border-radius: 30px;
-    padding: 15px 20px; /*slightly reduced padding*/
-    margin: 10px; /*added margin to separate buttons*/
+    padding: 15px 20px; 
+    margin: 10px; 
     color: #fff;
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    font-size: 18px; /*slightly reduced font size*/
+    font-size: 18px; 
     letter-spacing: 1px;
     transition: 0.2s ease;
     align-items: center;
@@ -248,12 +248,12 @@ object-fit: cover;
 
 @media (max-width: 768px) {
     .moreofme .container {
-        width: 95%; /*adjust container width for smaller screens*/
+        width: 95%; 
         padding: 20px;
     }
 
     .moreofme .links button.links {
-        width: auto; /*allow buttons to resize based on content*/
+        width: auto; 
     }
 }
 

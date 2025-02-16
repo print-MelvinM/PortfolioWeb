@@ -1,4 +1,4 @@
-/* Reset and Box Sizing */
+
 *,
 *::before,
 *::after {
@@ -7,11 +7,8 @@
     box-sizing: border-box;
 }
 
-
-
-/* Base HTML and Body Styles */
 html {
-    font-size: 62.5%; /* For rem units */
+    font-size: 62.5%; 
     height: 100%;
 }
 
@@ -83,7 +80,6 @@ ul.main-tabs li {
     object-fit: cover;
 }
 
-/* Round Button Styles */
 .round-button {
     height: 4.8rem;
     width: 4.8rem;

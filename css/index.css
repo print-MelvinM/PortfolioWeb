@@ -2,11 +2,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
     background-color: #f4f4f4;
     font-family: Arial, sans-serif;
-    flex-direction: column;
-    transition: background-color 2s ease-in-out; /* Add transition for smooth color change */
+    transition: background-color 2s ease-in-out;
 }
 
 body.black-background {

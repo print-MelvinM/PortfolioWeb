@@ -10,11 +10,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const welcomeText = document.getElementById('welcome-text');
-
-    // Trigger fadeOut after fadeIn
     setTimeout(function() {
         welcomeText.classList.add('fade-out');
-    }, 3000); // Adjust the timeout as needed
+    }, 3000); 
 
     welcomeText.addEventListener('animationend', function(event) {
         if (event.animationName === 'fadeOut') {

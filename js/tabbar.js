@@ -1,4 +1,3 @@
-// resources in description
 const mainTabs = document.querySelector(".main-tabs");
 const mainSliderCircle = document.querySelector(".main-slider-circle");
 const roundButtons = document.querySelectorAll(".round-button");
@@ -66,21 +65,15 @@ mainTabs.addEventListener("click", (event) => {
   const targetTranslateValue = event.target.dataset.translateValue;
 
   if (event.target.classList.contains("round-button")) {
-    // Assuming mainSliderCircle is now an img element or a container for an img
-    // You might need to change how you handle the "animate-jello" effect
-    // if it relies on SVG specific animations.
     if (mainSliderCircle.classList.contains("animate-jello")) {
       mainSliderCircle.classList.remove("animate-jello");
-      void mainSliderCircle.offsetWidth; // Force reflow
+      void mainSliderCircle.offsetWidth;
       mainSliderCircle.classList.add("animate-jello");
     }
-
     root.style.setProperty("--translate-main-slider", targetTranslateValue);
     root.style.setProperty("--main-slider-color", getColor(targetColor, 50));
     root.style.setProperty("--background-color", getColor(targetColor, 100));
-
     handleActiveTab(roundButtons, event, "active");
-
     if (!event.target.classList.contains("gallery")) {
       root.style.setProperty("--filters-container-height", "0");
       root.style.setProperty("--filters-wrapper-opacity", "0");

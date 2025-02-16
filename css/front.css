@@ -33,7 +33,6 @@ h1 {
 
 
 
-/* Fade In */
 @keyframes fadeIn {
     from {
         opacity: 0;
