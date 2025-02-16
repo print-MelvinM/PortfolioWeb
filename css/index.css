@@ -6,6 +6,11 @@ body {
     background-color: #f4f4f4;
     font-family: Arial, sans-serif;
     flex-direction: column;
+    transition: background-color 2s ease-in-out; /* Add transition for smooth color change */
+}
+
+body.black-background {
+    background-color: black;
 }
 
 h1 {
@@ -19,7 +24,6 @@ h1 {
 .fade-out {
     animation: fadeOut 2s ease-in-out forwards !important;
 }
-
 
 @keyframes fadeIn {
     from {
@@ -37,7 +41,7 @@ h1 {
         opacity: 1;
         transform: translateY(0);
     }
-    to { 
+    to {
         opacity: 0;
         transform: translateY(-20px);
     }

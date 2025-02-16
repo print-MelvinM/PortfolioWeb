@@ -5,15 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Next Page</title>
     <link rel="stylesheet" href="../css/details.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/tabbar.css" />
+   
 </head>
 <body>
-    <h1>Front Details page</h1>
-    <button class="btn" onclick="location.href='index.html'">Go Back</button>
+    <nav class="amazing-tabs" id="navElement">
+        <div class="main-tabs-container">
+            <div class="main-tabs-wrapper">
+                <ul class="main-tabs">
+                    <li>
+                        <button class="round-button" disabled>
+                            <span class="avatar"><img class="prof" src="../images/profile.jpg" alt="profile"></span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="round-button" onclick="location.href='details.html';">
+                            <img src="../images/home.svg" alt="home" class="profile-picture">
+                        </button>
+                    </li>
+                    <li>
+                        <button class="round-button active" onclick="location.href='skill.html';">
+                            <img src="../images/company.svg" alt="company" class="profile-picture">
+                        </button>
+                    </li>
+                    <li>
+                        <button class="round-button" onclick="location.href='certi.html';">
+                            <img src="../images/skils.svg" alt="skills" class="profile-picture">
+                        </button>
+                    </li>
+                    <li>
+                        <button class="round-button" onclick="location.href='more of me.html';">
+                            <img src="../images/more2.svg" alt="more" class="profile-picture">
+                        </button>
+                    </li>
+                </ul>
+                <div class="main-slider" aria-hidden="true">
+                    <div class="main-slider-circle">&nbsp;</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script src="../js/tabbar.js"></script>
+
+    <div class="name" id="nameElement">
+        <h1>I am Melvin Martinez</h1>
+    </div>
+
+    <div class="content" id="contentElement">
+        <div class="containerdets">
+            <div class="avatar-container">
+                <img class="profile" src="../images/profile.jpg" alt="profile">
+            </div>
+            <div class="text-container">
+                <h2>A dedicated Computer Engineer student with a strong foundation of technical knowledge, committed to continuous learning and professional growth. Eager to apply skills and expertise to provide meaningful contributions to the success of the company. Motivated by a drive for excellence and a passion for achieving impactful results that benefit both the organization and its goals.</h2>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        window.onload = function() {
+            const nameElement = document.getElementById('nameElement');
+            const contentElement = document.getElementById('contentElement');
+            const navElement = document.getElementById('navElement');
+            setTimeout(() =>{
+                nameElement.classList.add('visible');
+                setTimeout(() => {
+                    navElement.classList.add('visible'); // Show nav
+                    setTimeout(() => {
+                        nameElement.classList.add('resized');
+                        setTimeout(() => {
+                            contentElement.style.opacity = '1';
+                        }, 2000);
+                    }, 2000);
+                }, 500);
+            }, 500);
+        };
+    </script>
 </body>
 </html>
-
- 
- 
