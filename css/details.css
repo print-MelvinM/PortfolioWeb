@@ -19,8 +19,8 @@
     height: 120%;
     object-fit: cover;
     top: -10%;
-    transform: translateX(-300px); /* Initial position */
-    opacity: 0; /* Start invisible */
+    transform: translateX(-300px); 
+    opacity: 0; 
     transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 1.5s ease-in-out;
 }
 
@@ -65,7 +65,7 @@
     margin-top: -50px;
     padding-top: 20px;
     z-index: 2;
-    text-shadow: 0 0 10px #afafaf;
+
     animation: fadeIn 1s ease-in-out;
 }
 
