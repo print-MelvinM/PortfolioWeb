@@ -1,92 +1,113 @@
-
-.name {
-    padding-top: 400px;
-    color: white;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 1s ease, transform 1s ease, padding-top 1s ease;
-    transform-origin: top center;
-}
-.name.visible {
-    opacity: 1;
-}
-
-.name h1 {
-    font-size: 12em;
-    margin: 0;
-    transition: font-size 1s ease;
-    text-shadow: 0 0 100px #4D194d;
-}
-
-.name.resized {
-    padding-top: 150px;
-    transform: scale(0.8) translate(240px, 175px);
-}
-
-.name.resized h1 {
-    
-    font-size: 10em;
-    text-shadow: 0 0 100px #4D194d;
-}
-
-body {
-    transition: inherit;
-}
-
-.amazing-tabs {
-    opacity: 0;
-    transition: opacity 1s ease;
-}
-
-.amazing-tabs.visible {
-    opacity: 1;
-}
-
-.content {
-    align-self: center;
-    opacity: 0;
-    transition: opacity 1s ease;
-}
-
-.content h2 {
-    padding: 10px;
-    color: white;
-    font-size: 3em;
-    font-weight: 100;
-    text-align: justify;
-    margin: 0; 
-    text-shadow: 0 0 100px #4D194d;
-}
-
-.avatar-container img.profile {
-    height: 30rem;
-    width: 30rem;
-    border-radius: 50%;
-    box-shadow: 1px 1px 90px #006466;
-    display: block; 
-    
-}
-
-.containerdets {
+.side-by-side-container {
     display: flex;
     align-items: center;
-    width: 80%;
-    max-width: 1700px;
-    padding: 30px;
-    margin: 0 auto; 
-    
-}
 
-.text-container {
-    flex: 1; 
-    padding-left: 30px; 
+    height: 100vh;
+    padding: 0 5%;
 }
 
 .avatar-container {
-    margin-right: 20px; 
-    padding-bottom: 80px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    position: relative;
 }
 
-::-webkit-scrollbar {
-    display: none;
-  }
+.profile {
+    width: 955px;
+    height: 120%;
+    object-fit: cover;
+    top: -10%;
+    transform: translateX(-300px); /* Move it further left */
+}
+
+
+.name {
+    font-size: 6em;
+    font-weight: bold;
+    color: white;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    text-align: center;
+    margin-left: -450px;
+    margin-top: 400px; 
+    white-space: pre-line; /* Ensures proper line breaks */
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    margin-top: -400px;
+    margin-left: -500px;
+}
+
+.text-container {
+    font-size: 2em;
+    color: white;
+    font-family: "Caveat", cursive;
+    max-width: 600px;
+    margin-top: -50px;
+}
+
+.moreofme {
+    display: flex;
+    justify-content: left;
+}
+
+.moreofme .container {
+    align-items: right;
+    padding: 30px;
+    width: 80%;
+    max-width: 800px; 
+}
+
+.moreofme .links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.moreofme .links h1 {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 4em;
+    margin-bottom: 20px;
+    text-shadow: 0 0 50px #ffffff;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+}
+
+.moreofme .links .button-row {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.moreofme .links button.links {
+    background: linear-gradient(60deg, #ffffff 0%, #000000 100%);
+    border: none;
+    border-radius: 30px;
+    padding: 15px 20px; 
+    margin: 10px; 
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-size: 18px; 
+    letter-spacing: 1px;
+    transition: 0.2s ease;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 50px #ffffff;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    z-index: 2;
+}
+
+.moreofme .links button.links:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 50px #ffffff;
+}
