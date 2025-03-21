@@ -310,3 +310,6 @@ body {
     text-shadow: 0 0 10px #4D194d;
 }
 
+::-webkit-scrollbar {
+    display: none;
+  }
