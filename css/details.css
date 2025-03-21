@@ -1,11 +1,11 @@
 .side-by-side-container {
     display: flex;
     align-items: center;
-
+    margin-left: 200px;
     height: 100vh;
     padding: 0 5%;
+    animation: fadeIn 2s ease-in-out;
 }
-
 .avatar-container {
     flex-shrink: 0;
     display: flex;
@@ -19,20 +19,34 @@
     height: 120%;
     object-fit: cover;
     top: -10%;
-    transform: translateX(-300px); /* Move it further left */
+    transform: translateX(-300px); /* Initial position */
+    opacity: 0; /* Start invisible */
+    transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 1.5s ease-in-out;
 }
 
 
 .name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
     font-size: 6em;
     font-weight: bold;
     color: white;
     font-family: "Caveat", cursive;
     font-optical-sizing: auto;
     text-align: center;
-    margin-left: -450px;
-    margin-top: 400px; 
-    white-space: pre-line; /* Ensures proper line breaks */
+    margin-left: -150px;
+    margin-top: 400px;
+    white-space: pre-line;
+    text-shadow: 0 0 10px #949292;
+    z-index: 2;
+    animation: fadeIn 1s ease-in-out;
+}
+.name-gif {
+    width: 400px; /* Adjust size as needed */
+    height: auto;
+    margin-left: 100px;
 }
 
 .text-content {
@@ -49,16 +63,23 @@
     font-family: "Caveat", cursive;
     max-width: 600px;
     margin-top: -50px;
+    padding-top: 20px;
+    z-index: 2;
+    text-shadow: 0 0 10px #afafaf;
+    animation: fadeIn 1s ease-in-out;
 }
+
 
 .moreofme {
     display: flex;
     justify-content: left;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .moreofme .container {
     align-items: right;
     padding: 30px;
+    padding-top: 50px;
     width: 80%;
     max-width: 800px; 
 }
@@ -75,9 +96,9 @@
     color: #fff;
     font-size: 4em;
     margin-bottom: 20px;
-    text-shadow: 0 0 50px #ffffff;
     font-family: "Caveat", cursive;
     font-optical-sizing: auto;
+    text-shadow: 0 0 10px #afafaf;
 }
 
 .moreofme .links .button-row {
@@ -87,12 +108,12 @@
 }
 
 .moreofme .links button.links {
-    background: linear-gradient(60deg, #ffffff 0%, #000000 100%);
+    background: linear-gradient(70deg, #a3a3a3 0%, #b8b8b8 100%);
     border: none;
     border-radius: 30px;
     padding: 15px 20px; 
     margin: 10px; 
-    color: #fff;
+    color: #fff;    
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     font-size: 18px; 
@@ -104,10 +125,69 @@
     font-family: "Caveat", cursive;
     font-optical-sizing: auto;
     z-index: 2;
+    animation: radiantGlow 3s infinite ease-in-out; /* Apply the animation */
 }
 
 .moreofme .links button.links:hover {
     transform: scale(1.05);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     box-shadow: 0 0 50px #ffffff;
+    box-shadow: 0 0 20px #ffffff, 0 0 40px rgba(255, 255, 255, 0.9); 
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeAndMove {
+    0% {
+        opacity: 1;
+        transform: translateX(-300px); /* Initial position */
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateX(0); /* Move to the middle */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-300px); /* Return to original position */
+    }
+}
+
+.amazing-tabs {
+    opacity: 0; /* Start invisible */
+}
+
+.amazing-tabs {
+    opacity: 0; /* Start invisible */
+    transition: opacity 1s ease-in-out; /* Smooth fade-out transition */
+}
+
+.text-content {
+    opacity: 0; /* Start invisible */
+    transition: opacity 1s ease-in-out; /* Smooth fade-out transition */
+}
+
+@keyframes radiantGlow {
+    0% {
+        box-shadow: 0 0 60px #ffffff, 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+    25% {
+        box-shadow: 0 0 50px #ffffff, 0 0 30px rgba(255, 255, 255, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 40px #ffffff, 0 0 40px rgba(255, 255, 255, 0.9);
+    }
+    75% {
+        box-shadow: 0 0 50px #ffffff, 0 0 30px rgba(255, 255, 255, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 60px #ffffff, 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+}
+

@@ -41,19 +41,17 @@
                 </div>
             </div>
         </div>
-        
     </nav>
     <script src="../js/tabbar.js"></script>
     <div class="side-by-side-container">
         <div class="avatar-container">
-            <img class="profile" src="../images/thisone-removebg-preview.png" alt="profile">
+            <img class="profile" id="profileImage" src="../images/thisone-removebg-preview.png" alt="profile">
         </div>
-        <div class="text-content">
+        <div class="text-content" id="textContent">
             <div class="name" id="nameElement">
                 <h1>I am Melvin Jan <br> Martinez</h1>
                 <img class="name-gif" src="../images/output-onlinegiftools.gif" alt="Animated GIF">
             </div>
-            
             <div class="text-container">
                 <h2>A dedicated Computer Engineer student with a strong foundation of technical knowledge, committed to continuous learning and professional growth.</h2>
             </div>
@@ -74,7 +72,7 @@
                                 <img src="../images/ig.png" alt="Instagram" style="height: 20px; vertical-align: middle; margin-right: 5px;">
                                 <span style="vertical-align: middle;">Instagram</span>
                             </button>
-                             <button class="links">
+                            <button class="links">
                                 <img src="../images/gmail.png" alt="Gmail" style="height: 40px; vertical-align: middle; margin-right: 5px;">
                                 <span style="vertical-align: middle;">Gmail</span>
                             </button>
@@ -84,26 +82,25 @@
             </div>
         </div>
     </div>
-    
+
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const profileImage = document.getElementById('profileImage');
+    const textContent = document.getElementById('textContent');
+    const navElement = document.getElementById('navElement');
+    profileImage.style.opacity = '1';
+    profileImage.style.transform = 'translateX(0)';
+    setTimeout(() => {
+        profileImage.style.transform = 'translateX(-300px)';
+    }, 1000);
+    setTimeout(() => {
+        textContent.style.opacity = '1';
+        textContent.style.transition = 'opacity 1.5s ease-in-out';
         
-        window.onload = function() {
-            const nameElement = document.getElementById('nameElement');
-            const contentElement = document.getElementById('contentElement');
-            const navElement = document.getElementById('navElement');
-            setTimeout(() =>{
-                nameElement.classList.add('visible');
-                setTimeout(() => {
-                    navElement.classList.add('visible');
-                    setTimeout(() => {
-                        nameElement.classList.add('resized');
-                        setTimeout(() => {
-                            contentElement.style.opacity = '1';
-                        }, 2000);
-                    }, 2000);
-                }, 500);
-            }, 500);
-        };
+        navElement.style.opacity = '1'; 
+        navElement.style.transition = 'opacity 1.5s ease-in-out';
+    }, 2000);
+});
     </script>
 </body>
 </html>
