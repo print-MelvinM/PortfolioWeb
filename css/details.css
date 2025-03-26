@@ -39,8 +39,13 @@
     font-family: "Caveat", cursive;
     font-optical-sizing: auto;
     text-align: center;
+<<<<<<< Updated upstream
     margin-left: 0;
     margin-top: 75vh; /* Increased margin-top */
+=======
+    margin-left: -120px;
+    margin-top: 400px;
+>>>>>>> Stashed changes
     white-space: pre-line;
     text-shadow: 0 0 15px #949292; /* Increased text-shadow */
     z-index: 2;
@@ -73,6 +78,10 @@
     margin-top: -7.5%; /* Increased margin-top */
     padding-top: 30px; /* Increased padding-top */
     z-index: 2;
+<<<<<<< Updated upstream
+=======
+    margin-left: 50px;
+>>>>>>> Stashed changes
     animation: fadeIn 1s ease-in-out;
     order: 1;
 }
