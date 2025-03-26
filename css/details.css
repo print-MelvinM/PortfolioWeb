@@ -36,7 +36,7 @@
     font-family: "Caveat", cursive;
     font-optical-sizing: auto;
     text-align: center;
-    margin-left: -150px;
+    margin-left: -120px;
     margin-top: 400px;
     white-space: pre-line;
     text-shadow: 0 0 10px #949292;
@@ -63,6 +63,7 @@
     font-family: "Caveat", cursive;
     max-width: 600px;
     margin-top: -50px;
+    margin-left: 50px;
     padding-top: 20px;
     z-index: 2;
     text-shadow: 0 0 10px #afafaf;
