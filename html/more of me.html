@@ -59,13 +59,15 @@
     
         <div class="container">
           <div class="card">
-            <h2>Links</h2>
-            <p>Links</p>
-            <span>Links</span>
+            <h2>Download CV</h2>
+            <p>Curriculum Vitae</p>
+            <span>CV</span>
             <div class="pic">
               <img src="../images/pic.jpg" alt="user avatar">
             </div>
-            <button></button>
+            <button>
+                  <a href="../pdfs/Resume.pdf" download="Martinez Resume.pdf" style="text-decoration: none; color: inherit;">...</a>
+            </button>
           </div>
         </div>
     
@@ -110,82 +112,59 @@
         </div>
       </div>
 
-      <div class="affiliations">
-        <h1>AFFILIATIONS</h1>
-        <div class="container">
-            <div class="Aff">
-                
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Inclusive Dates</th>
-                            <th>Name Of Organization</th>
-                            <th>Position</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>2023-2024</td>
-                            <td>Computer Engineering for Advancing Technology Society</td>
-                            <td>3rd Yr. Representative</td>
-                        </tr>
-                        <tr>
-                            <td>2024-2025</td>
-                            <td>Computer Engineering for Advancing Technology Society</td>
-                            <td>Director of Photography</td>
-                        </tr>
-                        <tr>
-                            <td>2023</td>
-                            <td>Divino Amor - Multimedia Ministry</td>
-                            <td>Multimedia</td>
-                        </tr>
-                        <tr>
-                            <td>2013-2023</td>
-                            <td>Commitee on Altar Servers - Mary Mediatrix of All Grace Parish</td>
-                            <td>President</td>
-                        </tr>
-                        <tr>
-                            <td>2018-2020</td>
-                            <td>TMA Band</td>
-                            <td>Treasurer</td>
-                        </tr>
-                        <tr>
-                            <td>2016-2020</td>
-                            <td>Youth Ministry - Mary Mediatrix of All Grace Parish</td>
-                            <td>Representative of AS</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+    <div class="affiliations">
+    <h1>AFFILIATIONS</h1>
+    <div class="calendar-container">
+        <div class="year-block">
+            <h2>2023-2024</h2>
+            <ul>
+                <li><strong>Organization:</strong> Computer Engineering for Advancing Technology Society</li>
+                <li><strong>Position:</strong> 3rd Yr. Representative</li>
+            </ul>
         </div>
-        <p>This table showcases my diverse affiliations and roles across various organizations. These experiences have allowed me to develop leadership, teamwork, and technical skills, contributing to my personal and professional growth. Each affiliation has provided unique opportunities to serve my community and expand my knowledge in different fields.</p>
-    </div>
 
-      <div class="moreofme">
-        <div class="container">
-            <div class="links">
-                <h1>Links</h1>
-                <div class="button-row">
-                    <button class="links">
-                        <img src="../images/fb.png" alt="Facebook" style="height: 20px; vertical-align: middle; margin-right: 5px;">
-                        <span style="vertical-align: middle;">Facebook</span>
-                    </button>
-                    <button class="links">
-                        <img src="../images/git.png" alt="GitHub" style="height: 20px; vertical-align: middle; margin-right: 5px;">
-                        <span style="vertical-align: middle;">GitHub</span>
-                    </button>
-                    <button class="links">
-                        <img src="../images/ig.png" alt="Instagram" style="height: 20px; vertical-align: middle; margin-right: 5px;">
-                        <span style="vertical-align: middle;">Instagram</span>
-                    </button>
-                    <button class="links">
-                      <img src="../images/gmail.png" alt="Gmail" style="height: 40px; vertical-align: middle; margin-right: 5px;">
-                      <span style="vertical-align: middle;">Gmail</span>
-                  </button>
-                </div>
-            </div>
+        <div class="year-block">
+            <h2>2024-2025</h2>
+            <ul>
+                <li><strong>Organization:</strong> Computer Engineering for Advancing Technology Society</li>
+                <li><strong>Position:</strong> Director of Photography</li>
+            </ul>
+        </div>
+
+        <div class="year-block">
+            <h2>2023</h2>
+            <ul>
+                <li><strong>Organization:</strong> Divino Amor - Multimedia Ministry</li>
+                <li><strong>Position:</strong> Multimedia</li>
+            </ul>
+        </div>
+
+        <div class="year-block">
+            <h2>2013-2023</h2>
+            <ul>
+                <li><strong>Organization:</strong> Committee on Altar Servers - Mary Mediatrix of All Grace Parish</li>
+                <li><strong>Position:</strong> President</li>
+            </ul>
+        </div>
+
+        <div class="year-block">
+            <h2>2018-2020</h2>
+            <ul>
+                <li><strong>Organization:</strong> TMA Band</li>
+                <li><strong>Position:</strong> Treasurer</li>
+            </ul>
+        </div>
+
+        <div class="year-block">
+            <h2>2016-2020</h2>
+            <ul>
+                <li><strong>Organization:</strong> Youth Ministry - Mary Mediatrix of All Grace Parish</li>
+                <li><strong>Position:</strong> Representative of AS</li>
+            </ul>
         </div>
     </div>
+    <p></p>
+</div>
 
     <script>
       function createStars(numStars) {
@@ -282,7 +261,6 @@
           document.addEventListener('DOMContentLoaded', function() {
           const cards = document.querySelectorAll('.card');
           const mel = document.querySelector('.mel');
-          const moreofme = document.querySelector('.moreofme');
           const Affiliations = document.querySelector('.affiliations');
           const Certs = document.querySelector('.certs');
 
@@ -291,9 +269,7 @@
               button.addEventListener('click', function() {
                   if (index === 0) { 
                       mel.scrollIntoView({ behavior: 'smooth' });
-                  } else if (index === 1) { 
-                      moreofme.scrollIntoView({ behavior: 'smooth' });
-                  } else if (index === 2) { 
+                  }  else if (index === 2) { 
                       Affiliations.scrollIntoView({ behavior: 'smooth' });
                   } else if (index === 3) { 
                       Certs.scrollIntoView({ behavior: 'smooth' });
