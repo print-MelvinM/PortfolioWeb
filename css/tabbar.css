@@ -74,10 +74,14 @@ ul.main-tabs li {
     width: 4rem;
     border-radius: 50%;
     pointer-events: none;
+    cursor: default;
+
 }
 
 .avatar img {
     object-fit: cover;
+    filter: invert(1);
+
 }
 
 .round-button {
