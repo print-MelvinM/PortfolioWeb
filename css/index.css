@@ -19,6 +19,9 @@ h1 {
     animation: fadeIn 2s ease-in-out forwards;
     align-content: center;
 }
+img{
+    animation: fadeIn 2s ease-in-out forwards;
+}
 
 .fade-out {
     animation: fadeOut 2s ease-in-out forwards !important;
